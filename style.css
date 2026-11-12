@@ -1075,7 +1075,7 @@ button[href^="tel:"]:hover::before,
   background-color: #070a10;
   background-image: 
     linear-gradient(90deg, rgba(7, 10, 16, 0.95) 0%, rgba(7, 10, 16, 0.88) 42%, rgba(7, 10, 16, 0.55) 70%, rgba(7, 10, 16, 0.2) 100%),
-    url('Classic%20Tow%20Service%20at%20Sunset%20image%20for%20hero.png');
+    url('Classic%20Tow%20Service%20at%20Sunset%20image%20for%20hero.webp');
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
@@ -1097,7 +1097,7 @@ button[href^="tel:"]:hover::before,
   .hero {
     background-image: 
       linear-gradient(180deg, rgba(7, 10, 16, 0.95) 0%, rgba(7, 10, 16, 0.88) 60%, rgba(7, 10, 16, 0.45) 100%),
-      url('Classic%20Tow%20Service%20at%20Sunset%20image%20for%20hero.png');
+      url('Classic%20Tow%20Service%20at%20Sunset%20image%20for%20hero.webp');
     background-position: center bottom;
     padding-block: 3.5rem 3rem;
   }
@@ -2097,7 +2097,7 @@ button[href^="tel:"]:hover::before,
   background-color: #070a10;
   background-image: 
     linear-gradient(90deg, rgba(7, 10, 16, 0.98) 0%, rgba(7, 10, 16, 0.92) 42%, rgba(7, 10, 16, 0.72) 70%, rgba(7, 10, 16, 0.38) 100%),
-    url('RSA%20hero%20image.jpeg');
+    url('RSA%20hero%20image.webp');
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
@@ -2112,7 +2112,7 @@ button[href^="tel:"]:hover::before,
   .partner-section {
     background-image: 
       linear-gradient(180deg, rgba(7, 10, 16, 0.98) 0%, rgba(7, 10, 16, 0.92) 60%, rgba(7, 10, 16, 0.55) 100%),
-      url('RSA%20hero%20image.jpeg');
+      url('RSA%20hero%20image.webp');
     background-position: center bottom;
     padding: 4rem 0;
   }

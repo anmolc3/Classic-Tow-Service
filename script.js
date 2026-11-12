@@ -652,7 +652,7 @@ document.addEventListener('DOMContentLoaded', () => {
       waBtn.rel = 'noopener noreferrer';
       waBtn.setAttribute('aria-label', 'Chat with Classic Tow Service on WhatsApp');
       waBtn.setAttribute('title', 'Chat on WhatsApp (+91 96542 84747)');
-      waBtn.innerHTML = '<span class="floating-whatsapp__pulse" aria-hidden="true"></span><img src="WhatsApp%20Tow%20Truck%20Icon%20for%20floating%20whatsapp.png" alt="WhatsApp Tow Truck Icon" width="64" height="64" loading="eager" /><span class="floating-whatsapp__tooltip">Chat on WhatsApp</span>';
+      waBtn.innerHTML = '<span class="floating-whatsapp__pulse" aria-hidden="true"></span><img src="WhatsApp%20Tow%20Truck%20Icon%20for%20floating%20whatsapp.webp" alt="WhatsApp Tow Truck Icon" width="64" height="64" loading="eager" /><span class="floating-whatsapp__tooltip">Chat on WhatsApp</span>';
       document.body.appendChild(waBtn);
     }
   }
@@ -671,7 +671,7 @@ document.addEventListener('DOMContentLoaded', () => {
       locBtn.href = 'https://wa.me/919654284747?text=Hi%2C%20I%20need%20a%20tow.%20Sharing%20my%20location%3A%20';
       locBtn.setAttribute('aria-label', 'Send your location on WhatsApp');
       locBtn.setAttribute('title', 'Send Your Location on WhatsApp');
-      locBtn.innerHTML = '<span class="floating-location__pulse" aria-hidden="true"></span><img src="WhatsApp%20Location%20Sharing%20Icon.png" alt="Send Location on WhatsApp" width="64" height="64" loading="eager" /><span class="floating-location__tooltip">Send Your Location on WhatsApp</span>';
+      locBtn.innerHTML = '<span class="floating-location__pulse" aria-hidden="true"></span><img src="WhatsApp%20Location%20Sharing%20Icon.webp" alt="Send Location on WhatsApp" width="64" height="64" loading="eager" /><span class="floating-location__tooltip">Send Your Location on WhatsApp</span>';
       document.body.appendChild(locBtn);
     }
   }
