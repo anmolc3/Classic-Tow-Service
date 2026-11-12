@@ -1,0 +1,8 @@
+# robots.txt — Classic Tow Service
+# https://classictowservice.com
+
+User-agent: *
+Allow: /
+Disallow: /thank-you.html
+
+Sitemap: https://classictowservice.com/sitemap.xml

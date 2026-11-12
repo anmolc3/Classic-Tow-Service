@@ -1,0 +1,28 @@
+{
+  "name": "Classic Tow Service",
+  "short_name": "Classic Tow",
+  "description": "24/7 emergency towing and roadside assistance. Fast, reliable, affordable.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#FFD600",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-IN",
+  "icons": [
+    {
+      "src": "Classic Tow logo.PNG",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "Classic Tow logo.PNG",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["automotive", "utilities"],
+  "screenshots": []
+}
