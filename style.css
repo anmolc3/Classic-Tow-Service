@@ -4717,3 +4717,442 @@ button[href^="tel:"]:hover::before,
 .floating-location__pulse {
   display: none !important;
 }
+
+
+/* ==========================================================================
+   31. RSA LIVE TRACKING & 4.9 GOOGLE RATING SHOWCASE SECTION
+   ========================================================================== */
+.rsa-tracking-section {
+  background: #090d16;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 214, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 214, 0, 0.2);
+  padding: 5rem 0;
+}
+
+.rsa-tracking-section::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(255, 214, 0, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  filter: blur(50px);
+}
+
+.rsa-tracking-header {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 3rem;
+}
+
+.rsa-tracking-kicker-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.85rem;
+}
+
+.rsa-tracking-kicker {
+  font-family: var(--font-heading);
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--clr-accent);
+  text-transform: uppercase;
+}
+
+.rsa-live-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(37, 211, 102, 0.12);
+  border: 1px solid rgba(37, 211, 102, 0.45);
+  padding: 0.3rem 0.8rem;
+  border-radius: 9999px;
+  position: relative;
+}
+
+.rsa-pulse-core {
+  width: 8px;
+  height: 8px;
+  background-color: #25D366;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #25D366;
+}
+
+.rsa-pulse-wave {
+  position: absolute;
+  top: 50%;
+  left: 9px;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #25D366;
+  animation: rsaRadarPulse 1.8s infinite ease-out;
+  pointer-events: none;
+}
+
+@keyframes rsaRadarPulse {
+  0% { transform: translateY(-50%) scale(0.6); opacity: 1; }
+  100% { transform: translateY(-50%) scale(2.2); opacity: 0; }
+}
+
+.rsa-live-status-pill__text {
+  font-family: var(--font-heading);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #25D366;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.rsa-tracking-section .section-title {
+  color: #ffffff;
+  font-size: clamp(1.8rem, 4vw, 2.75rem);
+  margin-bottom: 0.85rem;
+}
+
+.rsa-tracking-section .section-sub {
+  color: #94a3b8;
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+
+.rsa-sub-link {
+  color: var(--clr-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.rsa-sub-link:hover {
+  color: #ffe033;
+}
+
+/* 3-Column Cards Grid */
+.rsa-tracking-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  align-items: stretch;
+}
+
+.rsa-tracking-card {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.rsa-tracking-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 214, 0, 0.35);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55), 0 0 24px rgba(255, 214, 0, 0.12);
+}
+
+.rsa-tracking-card--live::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #25D366, var(--clr-accent));
+}
+
+.rsa-tracking-card--rating::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #4285F4, #FBBC05, #34A853);
+}
+
+.rsa-tracking-card--partner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--clr-accent), #ffffff);
+}
+
+.rsa-tracking-card__badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.rsa-radar-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-heading);
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: #25D366;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.rsa-radar-tag__dot {
+  width: 7px;
+  height: 7px;
+  background-color: #25D366;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #25D366;
+}
+
+.rsa-eta-tag {
+  background: rgba(255, 214, 0, 0.12);
+  border: 1px solid rgba(255, 214, 0, 0.35);
+  color: var(--clr-accent);
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  letter-spacing: 0.04em;
+}
+
+.rsa-verified-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(66, 133, 244, 0.12);
+  border: 1px solid rgba(66, 133, 244, 0.35);
+  color: #60a5fa;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  letter-spacing: 0.04em;
+}
+
+.rsa-partner-tag {
+  background: rgba(255, 214, 0, 0.12);
+  border: 1px solid rgba(255, 214, 0, 0.35);
+  color: var(--clr-accent);
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  letter-spacing: 0.04em;
+}
+
+.rsa-tracking-card__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(37, 211, 102, 0.12);
+  color: #25D366;
+  border: 1px solid rgba(37, 211, 102, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.15rem;
+}
+
+.rsa-tracking-card__title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.65rem;
+  line-height: 1.25;
+}
+
+.rsa-tracking-card__text {
+  font-size: 0.93rem;
+  color: #cbd5e1;
+  line-height: 1.55;
+  margin-bottom: 1.35rem;
+}
+
+.rsa-tracking-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.rsa-tracking-card__list li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  color: #e2e8f0;
+}
+
+.rsa-tracking-card__list svg {
+  stroke: #25D366;
+  flex-shrink: 0;
+}
+
+.rsa-card-btn {
+  margin-top: auto;
+  width: 100%;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* 4.9 Rating Card Pill */
+.rsa-rating-pill-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1.15rem;
+}
+
+.rsa-google-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rsa-rating-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: rgba(15, 23, 42, 0.95);
+  border: 1.5px solid var(--clr-accent);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  box-shadow: 0 0 16px rgba(255, 214, 0, 0.2);
+}
+
+.rsa-rating-pill__star {
+  color: var(--clr-accent);
+  font-size: 0.92rem;
+}
+
+.rsa-rating-pill__score {
+  color: var(--clr-accent);
+  font-weight: 800;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+}
+
+.rsa-rating-pill__label {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-left: 0.25rem;
+}
+
+.rsa-stars-row {
+  color: var(--clr-accent);
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.rsa-stars-count {
+  color: #94a3b8;
+  font-size: 0.82rem;
+  letter-spacing: normal;
+  font-family: var(--font-body);
+}
+
+.rsa-rating-proof {
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.rsa-proof-stat strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  color: var(--clr-accent);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.rsa-proof-stat span {
+  font-size: 0.78rem;
+  color: #94a3b8;
+}
+
+/* Card 3 Partner Logo & Links */
+.rsa-tracking-card__logo-wrap {
+  margin-bottom: 1.15rem;
+}
+
+.rsa-tracking-card__logo-wrap img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+.rsa-partner-actions {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.rsa-partner-actions .btn--gold-badge {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.rsa-internal-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 0.95rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  color: #e2e8f0;
+  font-size: 0.84rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.rsa-internal-btn:hover {
+  background: rgba(255, 214, 0, 0.1);
+  border-color: rgba(255, 214, 0, 0.35);
+  color: var(--clr-accent);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .rsa-tracking-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .rsa-tracking-section {
+    padding: 3.75rem 0;
+  }
+}
