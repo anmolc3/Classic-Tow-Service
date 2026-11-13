@@ -3832,8 +3832,8 @@ button[href^="tel:"]:hover::before,
    ========================================================================== */
 .back-to-top {
   position: fixed;
-  bottom: 28px;
-  right: 28px;
+  bottom: calc(28px + var(--safe-bottom));
+  right: calc(100px + var(--safe-right));
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -3883,34 +3883,10 @@ button[href^="tel:"]:hover::before,
   transform: translateY(-2px);
 }
 
-/* Back to Top - positioned cleanly to the left of the WhatsApp FAB on the right */
-.back-to-top {
-  position: fixed;
-  bottom: calc(28px + var(--safe-bottom));
-  right: calc(102px + var(--safe-right));
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: #0f172a;
-  color: var(--clr-accent);
-  border: 2px solid var(--clr-accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 998;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4), 0 0 14px rgba(255, 214, 0, 0.25);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(16px) scale(0.9);
-  transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.35s ease, background 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
-  will-change: opacity, transform;
-}
-
 @media (max-width: 768px) {
   .back-to-top {
     bottom: calc(20px + var(--safe-bottom));
-    right: calc(84px + var(--safe-right));
+    right: calc(82px + var(--safe-right));
     width: 44px;
     height: 44px;
   }
@@ -3924,10 +3900,6 @@ button[href^="tel:"]:hover::before,
   bottom: calc(28px + var(--safe-bottom));
   right: calc(28px + var(--safe-right));
   z-index: 1000;
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: flex-end;
-  gap: 14px;
   pointer-events: none;
 }
 
@@ -4040,8 +4012,11 @@ button[href^="tel:"]:hover::before,
   transform: rotate(45deg);
 }
 
-/* Speed Dial Menu Container */
+/* Speed Dial Menu Container - Positioned absolutely above the FAB button */
 .whatsapp-fab__menu {
+  position: absolute;
+  bottom: calc(100% + 14px);
+  right: 0;
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-end;
@@ -4164,7 +4139,6 @@ button[href^="tel:"]:hover::before,
   .whatsapp-fab {
     bottom: calc(20px + var(--safe-bottom));
     right: calc(18px + var(--safe-right));
-    gap: 10px;
   }
 
   .whatsapp-fab__btn {
@@ -4204,7 +4178,6 @@ button[href^="tel:"]:hover::before,
     padding: 0.35rem 0.8rem;
   }
 }
-
 /* ==========================================================================
    28. PREMIUM GOLD-ACCENTED CAPSULE BUTTON (.btn--gold-badge)
    ========================================================================== */
