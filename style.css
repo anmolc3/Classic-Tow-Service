@@ -1148,6 +1148,59 @@ button[href^="tel:"]:hover::before,
   margin-bottom: 1.25rem;
 }
 
+.hero__badge--rating {
+  background: rgba(15, 23, 42, 0.78);
+  border: 1px solid rgba(255, 214, 0, 0.45);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35), 0 0 14px rgba(255, 214, 0, 0.18);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  gap: 0.55rem;
+  padding: 0.4rem 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.hero__badge--rating .stars {
+  color: #FFD600;
+  font-size: 0.95rem;
+  letter-spacing: 1.5px;
+  line-height: 1;
+}
+
+.hero__badge--rating .score {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.hero__badge--rating .score strong {
+  color: #FFD600;
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.hero__badge--rating .divider {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.hero__badge--rating .badge-label {
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 600;
+}
+
+.trust-chip--rating {
+  background: rgba(255, 214, 0, 0.12) !important;
+  border-color: rgba(255, 214, 0, 0.42) !important;
+  color: #ffffff !important;
+}
+
+.trust-chip--rating strong {
+  color: #FFD600;
+  font-weight: 800;
+}
+
 .hero__title, .hero h1 {
   font-size: clamp(2.2rem, 5.5vw, 3.8rem);
   font-weight: 700;
