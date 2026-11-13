@@ -20,11 +20,30 @@ document.addEventListener('DOMContentLoaded', () => {
       primaryNav.classList.toggle('open', shouldOpen);
       hamburger.classList.toggle('active', shouldOpen);
       document.body.classList.toggle('nav-open', shouldOpen);
+
+      if (shouldOpen) {
+        const header = document.getElementById('site-header') || document.querySelector('.site-header');
+        if (header) {
+          const rect = header.getBoundingClientRect();
+          primaryNav.style.top = `${rect.bottom}px`;
+        }
+      } else {
+        primaryNav.style.top = '';
+      }
     };
 
     hamburger.addEventListener('click', (e) => {
       e.stopPropagation();
       toggleMenu();
+    });
+
+    // Close on navigation link click
+    primaryNav.querySelectorAll('a:not(.nav-dropdown-btn)').forEach((link) => {
+      link.addEventListener('click', () => {
+        if (primaryNav.classList.contains('open')) {
+          toggleMenu(false);
+        }
+      });
     });
 
     // Close on outside click
@@ -70,6 +89,13 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
       });
+    });
+
+    // Close mobile nav when resizing to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1024 && primaryNav.classList.contains('open')) {
+        toggleMenu(false);
+      }
     });
   }
 

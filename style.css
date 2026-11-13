@@ -53,9 +53,14 @@
   --transition-fast:    .15s ease;
   --transition:         .25s ease;
 
+  --safe-top:           env(safe-area-inset-top, 0px);
+  --safe-bottom:        env(safe-area-inset-bottom, 0px);
+  --safe-left:          env(safe-area-inset-left, 0px);
+  --safe-right:         env(safe-area-inset-right, 0px);
+
   --header-h:           70px;
   --top-bar-h:          38px;
-  --bottom-bar-h:       60px;
+  --bottom-bar-h:       calc(60px + var(--safe-bottom));
 }
 
 /* ==========================================================================
@@ -80,6 +85,11 @@ body {
   line-height: 1.65;
   overflow-x: hidden;
   padding-bottom: var(--bottom-bar-h);
+}
+
+body.nav-open {
+  overflow: hidden !important;
+  touch-action: none;
 }
 
 @media (min-width: 992px) {
@@ -509,6 +519,10 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
+.hori-selector {
+  display: none !important;
+}
+
 @media (min-width: 1024px) {
   .primary-nav, .site-nav {
     display: flex;
@@ -615,7 +629,7 @@ h1, h2, h3, h4, h5, h6 {
 
   /* The Sliding Selector — Scoop Tab with Inverted Radius in Dark Blue on White Navbar */
   .hori-selector {
-    display: inline-block;
+    display: inline-block !important;
     position: absolute;
     height: calc(100% - 14px);
     bottom: 0;
@@ -942,13 +956,14 @@ button[href^="tel:"]:hover::before,
   .primary-nav.open, .site-nav.open, .mobile-nav.open {
     display: block;
     position: fixed;
-    top: calc(var(--header-h) + var(--top-bar-h) - 4px);
+    top: var(--header-h, 70px);
     left: 0;
     right: 0;
     bottom: 0;
     background: var(--clr-darker);
-    padding: 1.5rem 1.25rem 3rem;
+    padding: 1.5rem 1.25rem calc(3rem + var(--safe-bottom));
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     z-index: 999;
     box-shadow: 0 10px 40px rgba(0, 0, 0, .6);
     border-top: 1px solid rgba(255, 255, 255, .1);
@@ -1391,7 +1406,7 @@ button[href^="tel:"]:hover::before,
   padding: .8rem 1rem;
   border: 1.5px solid var(--clr-gray-200);
   border-radius: var(--radius-sm);
-  font-size: .95rem;
+  font-size: 1rem; /* 16px min prevents iOS Safari auto-zoom on focus */
   color: var(--clr-text);
   background: var(--clr-white);
   transition: border-color var(--transition), box-shadow var(--transition);
@@ -3132,7 +3147,8 @@ button[href^="tel:"]:hover::before,
   bottom: 0;
   left: 0;
   right: 0;
-  height: var(--bottom-bar-h, 56px);
+  height: var(--bottom-bar-h, 60px);
+  padding-bottom: var(--safe-bottom);
   display: flex;
   align-items: stretch;
   z-index: 997;
@@ -3849,11 +3865,11 @@ button[href^="tel:"]:hover::before,
   transform: translateY(-2px);
 }
 
-/* Mobile: sit safely above the 60px mobile bottom bar */
+/* Mobile: sit safely above the 60px mobile bottom bar with iOS safe area */
 @media (max-width: 768px) {
   .back-to-top {
-    bottom: 76px;
-    right: 18px;
+    bottom: calc(76px + var(--safe-bottom));
+    right: calc(18px + var(--safe-right));
     width: 44px;
     height: 44px;
   }
@@ -3977,11 +3993,11 @@ button[href^="tel:"]:hover::before,
   transform: translateY(-50%) translateX(0);
 }
 
-/* Mobile responsive positioning */
+/* Mobile responsive positioning with iOS safe-area insets */
 @media (max-width: 768px) {
   .floating-whatsapp {
-    bottom: 76px;
-    left: 18px;
+    bottom: calc(76px + var(--safe-bottom));
+    left: calc(18px + var(--safe-left));
     width: 52px;
     height: 52px;
   }
@@ -4203,10 +4219,15 @@ button[href^="tel:"]:hover::before,
 
 /* Mobile responsive scaling */
 @media (max-width: 600px) {
-  .btn--gold-badge {
+  .btn--gold-badge:not(.btn--gold-badge--footer):not(.btn--gold-badge--sm) {
     height: 50px;
     font-size: 0.96rem;
     padding: 0 1.25rem 0 0;
+  }
+
+  .btn--gold-badge--footer {
+    height: 38px !important;
+    font-size: 0.82rem !important;
   }
 
   .btn--gold-badge__badge {
@@ -4315,12 +4336,20 @@ button[href^="tel:"]:hover::before,
 }
 
 @media (max-width: 600px) {
+  .hero__ctas {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
   .hero__ctas .btn {
     width: 100%;
-    padding: 0.5rem 1.15rem;
-    font-size: 0.9rem;
+    padding: 0.55rem 1.15rem;
+    font-size: 0.92rem;
     justify-content: center;
   }
+
   .btn--whatsapp-location {
     font-size: 0.88rem;
     padding: 0.36rem 1.1rem 0.36rem 0.45rem;
@@ -4328,13 +4357,43 @@ button[href^="tel:"]:hover::before,
     width: 100%;
     justify-content: center;
   }
+
   .btn-location-icon-wrap {
     width: 28px;
     height: 28px;
   }
+
   .btn-location-icon-wrap img {
     width: 20px;
     height: 20px;
+  }
+
+  .partner-feat {
+    white-space: normal;
+    gap: 0.75rem;
+  }
+
+  .services-extra-bar {
+    border-radius: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1.25rem;
+  }
+
+  .services-extra-bar .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero__form-wrap,
+  .quote-form,
+  .contact-form {
+    padding: 1.25rem 1rem;
+  }
+
+  .review-card {
+    padding: 1.35rem 1.15rem 1.15rem !important;
   }
 }
 
@@ -4441,11 +4500,11 @@ button[href^="tel:"]:hover::before,
   transform: translateY(-50%) translateX(0);
 }
 
-/* Mobile responsive positioning */
+/* Mobile responsive positioning with iOS safe-area insets */
 @media (max-width: 768px) {
   .floating-location {
-    bottom: 138px;
-    left: 18px;
+    bottom: calc(138px + var(--safe-bottom));
+    left: calc(18px + var(--safe-left));
     width: 52px;
     height: 52px;
   }
