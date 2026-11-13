@@ -4652,3 +4652,471 @@ button[href^="tel:"]:hover::before,
 .floating-location__pulse {
   display: none !important;
 }
+/* ==========================================================================
+   31. RSA ALLIANCE, LIVE TRACKING & 4.9 GOOGLE RATING SECTION
+   ========================================================================== */
+.rsa-showcase-section {
+  position: relative;
+  background-color: #070a10;
+  background-image: 
+    linear-gradient(90deg, rgba(7, 10, 16, 0.98) 0%, rgba(7, 10, 16, 0.92) 42%, rgba(7, 10, 16, 0.75) 70%, rgba(7, 10, 16, 0.45) 100%),
+    url('RSA%20hero%20image.webp');
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  color: var(--clr-white);
+  padding: 5rem 0;
+  overflow: hidden;
+  border-top: 2px solid rgba(255, 214, 0, 0.28);
+  border-bottom: 2px solid rgba(255, 214, 0, 0.28);
+}
+
+@media (max-width: 991px) {
+  .rsa-showcase-section {
+    background-image: 
+      linear-gradient(180deg, rgba(7, 10, 16, 0.98) 0%, rgba(7, 10, 16, 0.92) 60%, rgba(7, 10, 16, 0.55) 100%),
+      url('RSA%20hero%20image.webp');
+    background-position: center bottom;
+    padding: 3.75rem 0;
+  }
+}
+
+.rsa-showcase-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 2.25rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.rsa-kicker-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+/* Live Tracking Status Pill with Pulsing Radar */
+.rsa-live-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: rgba(37, 211, 102, 0.12);
+  border: 1px solid rgba(37, 211, 102, 0.45);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  position: relative;
+}
+
+.rsa-pulse-wrapper {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rsa-pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #25D366;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #25D366;
+}
+
+.rsa-pulse-ring {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #25D366;
+  animation: rsa-radar-pulse 2s infinite cubic-bezier(0.25, 1, 0.5, 1);
+  pointer-events: none;
+}
+
+.rsa-live-pill__text {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #25D366;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* 4.9 Google Rating Pill for RSA (Matches User Reference Image) */
+.rsa-google-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1.5px solid var(--clr-accent);
+  padding: 0.35rem 0.95rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  box-shadow: 0 0 16px rgba(255, 214, 0, 0.18);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.rsa-google-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 24px rgba(255, 214, 0, 0.42);
+  border-color: #ffe033;
+}
+
+.rsa-google-badge__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.rsa-rating-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-family: var(--font-body);
+}
+
+.rsa-rating-pill__star {
+  color: var(--clr-accent);
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.rsa-rating-pill__score {
+  color: var(--clr-accent);
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 1;
+  font-family: var(--font-heading);
+}
+
+.rsa-rating-pill__label {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.86rem;
+  margin-left: 0.25rem;
+  letter-spacing: 0.01em;
+}
+
+/* Left Column Links & Sublink */
+.rsa-inline-link {
+  color: var(--clr-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.rsa-inline-link:hover {
+  color: #ffe033;
+}
+
+.rsa-actions-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.75rem;
+}
+
+.btn--whatsapp-tracking {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: #25D366;
+  color: #ffffff !important;
+  font-family: var(--font-heading);
+  font-size: 0.94rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.82rem 1.5rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+  text-decoration: none;
+  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn--whatsapp-tracking:hover {
+  background-color: #1ebc57;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.5);
+  color: #ffffff !important;
+}
+
+.btn--whatsapp-tracking svg {
+  flex-shrink: 0;
+}
+
+.rsa-sublink {
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+.rsa-text-link {
+  color: var(--clr-accent);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.rsa-text-link:hover {
+  color: #ffe033;
+  text-decoration: underline;
+}
+
+/* Right Column Cards */
+.rsa-showcase-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Spotlight Card: Live Tracking */
+.rsa-card--tracking {
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.94) 0%, rgba(7, 10, 16, 0.98) 100%);
+  border: 1.5px solid rgba(255, 214, 0, 0.38);
+  border-radius: 18px;
+  padding: 1.65rem 1.85rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45), 0 0 28px rgba(255, 214, 0, 0.12);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.rsa-card--tracking::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #25D366, var(--clr-accent), #25D366);
+  opacity: 0.85;
+}
+
+.rsa-card--tracking:hover {
+  border-color: rgba(255, 214, 0, 0.7);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.55), 0 0 36px rgba(255, 214, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+.rsa-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.rsa-radar-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  position: relative;
+}
+
+.rsa-radar-dot-wrap {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rsa-radar-core {
+  width: 8px;
+  height: 8px;
+  background-color: #25D366;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #25D366;
+}
+
+.rsa-radar-ping {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #25D366;
+  animation: rsa-radar-pulse 1.8s infinite ease-out;
+  pointer-events: none;
+}
+
+.rsa-radar-label {
+  font-family: var(--font-heading);
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: #25D366;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.rsa-badge-eta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(255, 214, 0, 0.12);
+  border: 1px solid rgba(255, 214, 0, 0.45);
+  color: var(--clr-accent);
+  font-family: var(--font-heading);
+  font-size: 0.74rem;
+  font-weight: 800;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.rsa-card__title {
+  font-family: var(--font-heading);
+  font-size: 1.32rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.45rem;
+  line-height: 1.25;
+}
+
+.rsa-card__text {
+  font-size: 0.92rem;
+  color: #cbd5e1;
+  line-height: 1.55;
+  margin-bottom: 1.1rem;
+}
+
+.rsa-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.rsa-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: #e2e8f0;
+}
+
+.rsa-meta-item svg {
+  stroke: #25D366;
+  flex-shrink: 0;
+}
+
+/* Mini Features 3-Column Grid */
+.rsa-mini-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+}
+
+.rsa-mini-feat {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 0.95rem 0.85rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  transition: border-color 0.25s ease, background-color 0.25s ease, transform 0.25s ease;
+}
+
+.rsa-mini-feat:hover {
+  border-color: rgba(255, 214, 0, 0.4);
+  background-color: rgba(15, 23, 42, 0.92);
+  transform: translateY(-2px);
+}
+
+.rsa-mini-feat__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(255, 214, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-accent);
+  flex-shrink: 0;
+}
+
+.rsa-mini-feat__head {
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.15rem;
+  line-height: 1.25;
+}
+
+.rsa-mini-feat__sub {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  line-height: 1.35;
+  margin: 0;
+}
+
+@keyframes rsa-radar-pulse {
+  0% { transform: scale(0.6); opacity: 1; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+@media (max-width: 991px) {
+  .rsa-showcase-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .rsa-mini-features {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .rsa-actions-wrap {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .btn--whatsapp-tracking,
+  .rsa-actions-wrap .btn--gold-badge {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .rsa-card--tracking {
+    padding: 1.25rem 1.15rem;
+  }
+
+  .rsa-card__title {
+    font-size: 1.18rem;
+  }
+
+  .rsa-showcase-header {
+    padding-bottom: 1rem;
+  }
+
+  .rsa-google-badge {
+    width: 100%;
+    justify-content: center;
+  }
+}
