@@ -69,17 +69,19 @@
 
   <!-- Skip to content -->
   <a class="skip-link" href="#main-content">Skip to main content</a>
-
-  <!-- Top Bar -->
+  <!-- ===== TOP BAR ===== -->
   <div class="top-bar" role="banner" aria-label="Contact information">
     <div class="container top-bar__inner">
-      <span class="top-bar__badge">24/7 Towing &amp; Roadside Assistance</span>
+      <span class="top-bar__badge">
+        <span class="badge-text-full">24/7 Towing &amp; Roadside Assistance</span>
+        <span class="badge-text-short">24/7 Towing &amp; RSA</span>
+      </span>
       <div class="top-bar__contacts">
-        <a href="tel:+919654284747" class="top-bar__link" aria-label="Call Classic Tow Service">
+        <a href="tel:+919654284747" class="top-bar__link top-bar__link--phone" aria-label="Call Classic Tow Service">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
           +91 96542 84747
         </a>
-        <a href="mailto:support@classictowservice.com" class="top-bar__link" aria-label="Email Classic Tow Service">
+        <a href="mailto:support@classictowservice.com" class="top-bar__link top-bar__link--email" aria-label="Email Classic Tow Service">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
           support@classictowservice.com
         </a>
@@ -342,18 +344,6 @@
     </div>
   </footer>
 
-  <!-- Sticky Mobile Bottom Bar -->
-  <div class="mobile-bottom-bar mobile-bar" role="navigation" aria-label="Quick mobile contact actions">
-    <a href="tel:+919654284747" class="mobile-bar-call mobile-bar__btn mobile-bar__btn--call" aria-label="Call Classic Tow Service">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-      Call Now
-    </a>
-    <a href="https://wa.me/919654284747?text=Hi%2C%20I%20need%20a%20tow.%20My%20location%20is%3A%20" class="mobile-bar-wa mobile-bar__btn mobile-bar__btn--whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Message on WhatsApp">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.985-1.306A9.953 9.953 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.952 7.952 0 01-4.049-1.106l-.29-.173-3.005.788.803-2.927-.19-.302A7.952 7.952 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
-      WhatsApp
-    </a>
-  </div>
-
   <!-- Cookie Banner -->
   <div class="cookie-notice cookie-banner hidden" id="cookie-notice" role="dialog" aria-live="polite" aria-label="Cookie consent">
     <p>We use cookies to enhance your experience. By continuing to visit this site, you agree to our <a href="privacy-policy.html">Privacy Policy</a>.</p>
@@ -364,18 +354,41 @@
   </div>
 
   <!-- JavaScript -->
-      <!-- Floating Send Location on WhatsApp Button -->
-  <a id="floating-location" class="floating-location" href="https://wa.me/919654284747?text=Hi%2C%20I%20need%20a%20tow.%20Sharing%20my%20location%3A%20" onclick="sendLocationOnWhatsApp(event)" aria-label="Send your location on WhatsApp" title="Send Your Location on WhatsApp">
-    <span class="floating-location__pulse" aria-hidden="true"></span>
-    <img src="WhatsApp%20Location%20Sharing%20Icon.webp" alt="Send Location on WhatsApp" width="64" height="64" loading="eager" />
-    <span class="floating-location__tooltip">Send Your Location on WhatsApp</span>
-  </a>
-<!-- Floating WhatsApp Action Button -->
-  <a href="https://wa.me/919654284747?text=Hi%2C%20I%20need%20a%20tow.%20My%20location%20is%3A%20" class="floating-whatsapp" id="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat with Classic Tow Service on WhatsApp" title="Chat on WhatsApp (+91 96542 84747)">
-    <span class="floating-whatsapp__pulse" aria-hidden="true"></span>
-    <img src="WhatsApp%20Tow%20Truck%20Icon%20for%20floating%20whatsapp.webp" alt="WhatsApp Tow Truck Icon" width="64" height="64" loading="eager" />
-    <span class="floating-whatsapp__tooltip">Chat on WhatsApp</span>
-  </a>
+  <!-- Floating WhatsApp Speed Dial (Expandable FAB on the right) -->
+  <div class="whatsapp-fab" id="whatsapp-fab">
+    <div class="whatsapp-fab__menu" id="whatsapp-fab-menu" role="menu" aria-hidden="true">
+      <!-- Action 1: Send Location on WhatsApp -->
+      <a id="floating-location" class="whatsapp-fab__action floating-location" href="https://wa.me/919654284747?text=Hi%2C%20I%20need%20a%20tow.%20Sharing%20my%20location%3A%20" onclick="sendLocationOnWhatsApp(event)" aria-label="Send your location on WhatsApp" role="menuitem" tabindex="-1">
+        <span class="whatsapp-fab__label">Send Location</span>
+        <div class="whatsapp-fab__icon-wrap">
+          <img src="WhatsApp%20Location%20Sharing%20Icon.webp" alt="Send Location on WhatsApp" width="48" height="48" loading="eager" />
+        </div>
+      </a>
+
+      <!-- Action 2: Chat on WhatsApp -->
+      <a id="floating-whatsapp" class="whatsapp-fab__action floating-whatsapp" href="https://wa.me/919654284747?text=Hi%2C%20I%20need%20a%20tow.%20My%20location%20is%3A%20" target="_blank" rel="noopener noreferrer" aria-label="Chat with Classic Tow Service on WhatsApp" role="menuitem" tabindex="-1">
+        <span class="whatsapp-fab__label">Chat on WhatsApp</span>
+        <div class="whatsapp-fab__icon-wrap">
+          <img src="WhatsApp%20Tow%20Truck%20Icon%20for%20floating%20whatsapp.webp" alt="WhatsApp Tow Truck Icon" width="48" height="48" loading="eager" />
+        </div>
+      </a>
+    </div>
+
+    <!-- Main Plus Trigger Button -->
+    <button class="whatsapp-fab__btn" id="whatsapp-fab-btn" aria-label="WhatsApp quick actions" aria-expanded="false" aria-controls="whatsapp-fab-menu" title="WhatsApp Assistance">
+      <span class="whatsapp-fab__pulse" aria-hidden="true"></span>
+      <svg class="whatsapp-fab__icon-wa" width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.985-1.306A9.953 9.953 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.952 7.952 0 01-4.049-1.106l-.29-.173-3.005.788.803-2.927-.19-.302A7.952 7.952 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/>
+      </svg>
+      <span class="whatsapp-fab__plus-badge" aria-hidden="true">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+      </span>
+    </button>
+  </div>
 
   <!-- Back to Top Button -->
   <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">

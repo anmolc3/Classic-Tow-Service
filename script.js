@@ -665,44 +665,52 @@ document.addEventListener('DOMContentLoaded', () => {
   initBackToTop();
 
   /* ============================================================
-     19. FLOATING WHATSAPP BUTTON (3D TOW TRUCK BADGE)
+     19. WHATSAPP EXPANDABLE SPEED DIAL (FAB ON THE RIGHT)
      ============================================================ */
-  function initFloatingWhatsApp() {
-    let waBtn = document.getElementById('floating-whatsapp');
-    if (!waBtn) {
-      waBtn = document.createElement('a');
-      waBtn.id = 'floating-whatsapp';
-      waBtn.className = 'floating-whatsapp';
-      waBtn.href = 'https://wa.me/919654284747?text=Hi%2C%20I%20need%20a%20tow.%20My%20location%20is%3A%20';
-      waBtn.target = '_blank';
-      waBtn.rel = 'noopener noreferrer';
-      waBtn.setAttribute('aria-label', 'Chat with Classic Tow Service on WhatsApp');
-      waBtn.setAttribute('title', 'Chat on WhatsApp (+91 96542 84747)');
-      waBtn.innerHTML = '<span class="floating-whatsapp__pulse" aria-hidden="true"></span><img src="WhatsApp%20Tow%20Truck%20Icon%20for%20floating%20whatsapp.webp" alt="WhatsApp Tow Truck Icon" width="64" height="64" loading="eager" /><span class="floating-whatsapp__tooltip">Chat on WhatsApp</span>';
-      document.body.appendChild(waBtn);
-    }
+  function initWhatsAppFab() {
+    const fab = document.getElementById('whatsapp-fab');
+    if (!fab) return;
+
+    const triggerBtn = document.getElementById('whatsapp-fab-btn');
+    const menu = document.getElementById('whatsapp-fab-menu');
+    if (!triggerBtn || !menu) return;
+
+    const toggleFab = (open) => {
+      const isCurrentlyOpen = fab.classList.contains('is-open');
+      const shouldOpen = open !== undefined ? open : !isCurrentlyOpen;
+
+      fab.classList.toggle('is-open', shouldOpen);
+      triggerBtn.setAttribute('aria-expanded', String(shouldOpen));
+      menu.setAttribute('aria-hidden', String(!shouldOpen));
+
+      const items = menu.querySelectorAll('a');
+      items.forEach((item) => {
+        item.setAttribute('tabindex', shouldOpen ? '0' : '-1');
+      });
+    };
+
+    triggerBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleFab();
+    });
+
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      if (fab.classList.contains('is-open') && !fab.contains(e.target)) {
+        toggleFab(false);
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && fab.classList.contains('is-open')) {
+        toggleFab(false);
+        triggerBtn.focus();
+      }
+    });
   }
 
-  initFloatingWhatsApp();
-
-  /* ============================================================
-     20. FLOATING LOCATION BUTTON (AUTO-INJECTION FALLBACK)
-     ============================================================ */
-  function initFloatingLocation() {
-    let locBtn = document.getElementById('floating-location');
-    if (!locBtn) {
-      locBtn = document.createElement('a');
-      locBtn.id = 'floating-location';
-      locBtn.className = 'floating-location';
-      locBtn.href = 'https://wa.me/919654284747?text=Hi%2C%20I%20need%20a%20tow.%20Sharing%20my%20location%3A%20';
-      locBtn.setAttribute('aria-label', 'Send your location on WhatsApp');
-      locBtn.setAttribute('title', 'Send Your Location on WhatsApp');
-      locBtn.innerHTML = '<span class="floating-location__pulse" aria-hidden="true"></span><img src="WhatsApp%20Location%20Sharing%20Icon.webp" alt="Send Location on WhatsApp" width="64" height="64" loading="eager" /><span class="floating-location__tooltip">Send Your Location on WhatsApp</span>';
-      document.body.appendChild(locBtn);
-    }
-  }
-
-  initFloatingLocation();
+  initWhatsAppFab();
 
   /* ============================================================
      21. SEND YOUR LOCATION ON WHATSAPP (HERO CTA & FLOATING)

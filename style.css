@@ -84,18 +84,12 @@ body {
   background: var(--clr-white);
   line-height: 1.65;
   overflow-x: hidden;
-  padding-bottom: var(--bottom-bar-h);
+  padding-bottom: 0;
 }
 
 body.nav-open {
   overflow: hidden !important;
   touch-action: none;
-}
-
-@media (min-width: 992px) {
-  body {
-    padding-bottom: 0;
-  }
 }
 
 img, svg {
@@ -383,6 +377,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: .78rem;
 }
 
+.top-bar__badge .badge-text-short {
+  display: none;
+}
+
 .top-bar__contacts {
   display: flex;
   align-items: center;
@@ -396,6 +394,7 @@ h1, h2, h3, h4, h5, h6 {
   gap: .4rem;
   color: rgba(255, 255, 255, .85);
   font-weight: 500;
+  text-decoration: none;
 }
 
 .top-bar__link:hover, .top-bar__item a:hover {
@@ -405,6 +404,71 @@ h1, h2, h3, h4, h5, h6 {
 .top-bar__link svg, .top-bar__item svg {
   color: var(--clr-accent);
   flex-shrink: 0;
+}
+
+/* Mobile: strictly ONE LINER top-bar */
+@media (max-width: 768px) {
+  .top-bar {
+    font-size: 0.76rem;
+  }
+
+  .top-bar__inner {
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    min-height: 34px !important;
+    height: 34px !important;
+    padding-block: 0 !important;
+    gap: 0.5rem !important;
+    overflow: hidden !important;
+  }
+
+  .top-bar__badge {
+    font-size: 0.72rem !important;
+    letter-spacing: 0.02em !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+  }
+
+  .top-bar__contacts {
+    flex-wrap: nowrap !important;
+    gap: 0.5rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  .top-bar__link,
+  .top-bar__item {
+    font-size: 0.76rem !important;
+    white-space: nowrap !important;
+    gap: 0.35rem !important;
+  }
+
+  .top-bar__link svg,
+  .top-bar__item svg {
+    width: 13px !important;
+    height: 13px !important;
+  }
+
+  /* Hide email link on mobile so top bar is strictly one clean line */
+  .top-bar a[href^="mailto"],
+  .top-bar__link--email,
+  .top-bar__item--email,
+  .top-bar__item:has(a[href^="mailto"]) {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-bar__badge .badge-text-full {
+    display: none !important;
+  }
+  .top-bar__badge .badge-text-short {
+    display: inline !important;
+  }
 }
 
 /* ==========================================================================
@@ -1111,10 +1175,16 @@ button[href^="tel:"]:hover::before,
 @media (max-width: 991px) {
   .hero {
     background-image: 
-      linear-gradient(180deg, rgba(7, 10, 16, 0.95) 0%, rgba(7, 10, 16, 0.88) 60%, rgba(7, 10, 16, 0.45) 100%),
+      linear-gradient(180deg, rgba(7, 10, 16, 0.98) 0%, rgba(7, 10, 16, 0.90) 50%, rgba(7, 10, 16, 0.75) 100%),
       url('Classic%20Tow%20Service%20at%20Sunset%20image%20for%20hero.webp');
     background-position: center bottom;
-    padding-block: 3.5rem 3rem;
+    padding-block: 3rem 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding-block: 2.25rem 2rem;
   }
 }
 
@@ -1203,17 +1273,6 @@ button[href^="tel:"]:hover::before,
 .hero__badge--rating .badge-label {
   color: rgba(255, 255, 255, 0.92);
   font-weight: 600;
-}
-
-.trust-chip--rating {
-  background: rgba(255, 214, 0, 0.12) !important;
-  border-color: rgba(255, 214, 0, 0.42) !important;
-  color: #ffffff !important;
-}
-
-.trust-chip--rating strong {
-  color: #FFD600;
-  font-weight: 800;
 }
 
 .hero__title, .hero h1 {
@@ -3140,51 +3199,10 @@ button[href^="tel:"]:hover::before,
 }
 
 /* ==========================================================================
-   20. STICKY MOBILE BOTTOM BAR
+   20. MOBILE BOTTOM BAR (Removed per user request)
    ========================================================================== */
-.mobile-bottom-bar, .bottom-bar, .mobile-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: var(--bottom-bar-h, 60px);
-  padding-bottom: var(--safe-bottom);
-  display: flex;
-  align-items: stretch;
-  z-index: 997;
-  box-shadow: 0 -4px 20px rgba(0, 0, 0, .45);
-  background: var(--clr-dark);
-}
-
-@media (min-width: 992px) {
-  .mobile-bottom-bar, .bottom-bar, .mobile-bar, [class*="mobile-bar"], [class*="mobile-bottom-bar"] {
-    display: none !important;
-  }
-}
-
-.mobile-bottom-bar a, .bottom-bar a, .mobile-bar a, .mobile-bar__btn {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: .55rem;
-  font-family: var(--font-heading);
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: .04em;
-  text-transform: uppercase;
-  text-decoration: none !important;
-  padding: .75rem 1rem;
-  transition: filter var(--transition-fast);
-}
-
-.mobile-bottom-bar__whatsapp, .mobile-bar-wa, .mobile-bar__btn--whatsapp {
-  background: var(--clr-whatsapp) !important;
-  color: var(--clr-white) !important;
-}
-
-.mobile-bottom-bar a:hover, .mobile-bar a:hover, .mobile-bar__btn:hover {
-  filter: brightness(1.08);
+.mobile-bottom-bar, .bottom-bar, .mobile-bar, [class*="mobile-bar"], [class*="mobile-bottom-bar"] {
+  display: none !important;
 }
 
 /* ==========================================================================
@@ -3192,7 +3210,7 @@ button[href^="tel:"]:hover::before,
    ========================================================================== */
 .cookie-banner, .cookie-notice {
   position: fixed;
-  bottom: calc(var(--bottom-bar-h) + .75rem);
+  bottom: calc(.75rem + var(--safe-bottom));
   left: .75rem;
   right: .75rem;
   background: var(--clr-dark);
@@ -3865,145 +3883,325 @@ button[href^="tel:"]:hover::before,
   transform: translateY(-2px);
 }
 
-/* Mobile: sit safely above the 60px mobile bottom bar with iOS safe area */
+/* Back to Top - positioned cleanly to the left of the WhatsApp FAB on the right */
+.back-to-top {
+  position: fixed;
+  bottom: calc(28px + var(--safe-bottom));
+  right: calc(102px + var(--safe-right));
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #0f172a;
+  color: var(--clr-accent);
+  border: 2px solid var(--clr-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 998;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4), 0 0 14px rgba(255, 214, 0, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px) scale(0.9);
+  transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.35s ease, background 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
+  will-change: opacity, transform;
+}
+
 @media (max-width: 768px) {
   .back-to-top {
-    bottom: calc(76px + var(--safe-bottom));
-    right: calc(18px + var(--safe-right));
+    bottom: calc(20px + var(--safe-bottom));
+    right: calc(84px + var(--safe-right));
     width: 44px;
     height: 44px;
   }
 }
 
 /* ==========================================================================
-   27. FLOATING WHATSAPP BUTTON (3D TOW TRUCK BADGE)
+   27. FLOATING WHATSAPP SPEED DIAL (Expandable FAB with Plus Button on Right)
    ========================================================================== */
-.floating-whatsapp {
+.whatsapp-fab {
   position: fixed;
-  bottom: 28px;
-  left: 28px;
-  width: 64px;
-  height: 64px;
-  z-index: 998;
+  bottom: calc(28px + var(--safe-bottom));
+  right: calc(28px + var(--safe-right));
+  z-index: 1000;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  gap: 14px;
+  pointer-events: none;
+}
+
+/* Main Trigger Button (+ / WhatsApp) */
+.whatsapp-fab__btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  border: 2.5px solid #25D366;
+  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.55), 0 2px 8px rgba(0, 0, 0, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  text-decoration: none;
-  background: transparent;
-  filter: drop-shadow(0 6px 14px rgba(37, 211, 102, 0.52)) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
-  will-change: transform, filter;
+  pointer-events: auto;
+  position: relative;
+  color: #ffffff;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+  user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
 
-.floating-whatsapp:hover {
-  transform: translateY(-4px) scale(1.1);
-  filter: drop-shadow(0 10px 24px rgba(37, 211, 102, 0.8)) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.45));
+.whatsapp-fab__btn:hover {
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.75), 0 4px 12px rgba(0, 0, 0, 0.4);
+  border-color: #34e77a;
 }
 
-.floating-whatsapp:active {
-  transform: translateY(-1px) scale(0.98);
+.whatsapp-fab__btn:active {
+  transform: translateY(0) scale(0.96);
 }
 
-.floating-whatsapp:focus-visible {
-  outline: 3px solid #25D366;
+.whatsapp-fab__btn:focus-visible {
+  outline: 3px solid #FFD600;
   outline-offset: 4px;
-  border-radius: 50%;
 }
 
-/* Pulsing radar ring */
-.floating-whatsapp__pulse {
+/* Pulsing radar ring on trigger */
+.whatsapp-fab__pulse {
   position: absolute;
   width: 52px;
   height: 52px;
   border-radius: 50%;
   background: rgba(37, 211, 102, 0.4);
   z-index: -1;
-  animation: waPulse 2.4s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+  animation: fabPulse 2.4s cubic-bezier(0.24, 0, 0.38, 1) infinite;
   pointer-events: none;
 }
 
-@keyframes waPulse {
-  0% {
-    transform: scale(0.92);
-    opacity: 0.85;
-  }
-  70% {
-    transform: scale(1.48);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1.48);
-    opacity: 0;
-  }
+@keyframes fabPulse {
+  0% { transform: scale(0.92); opacity: 0.85; }
+  70% { transform: scale(1.52); opacity: 0; }
+  100% { transform: scale(1.52); opacity: 0; }
 }
 
-/* 3D WhatsApp Tow Truck Badge */
-.floating-whatsapp img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transform: scale(1.33);
-  display: block;
-  pointer-events: none;
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+.whatsapp-fab.is-open .whatsapp-fab__pulse {
+  display: none;
 }
 
-.floating-whatsapp:hover img {
-  transform: scale(1.38);
+/* The WhatsApp Icon inside the button */
+.whatsapp-fab__icon-wa {
+  width: 30px;
+  height: 30px;
+  fill: #ffffff;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Tooltip on desktop */
-.floating-whatsapp__tooltip {
+/* The Circular Plus Badge at top-right of the button */
+.whatsapp-fab__plus-badge {
   position: absolute;
-  left: calc(100% + 12px);
-  top: 50%;
-  transform: translateY(-50%) translateX(-6px);
+  top: -2px;
+  right: -2px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #FFD600;
+  color: #0f172a;
+  border: 2px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.whatsapp-fab__plus-badge svg {
+  width: 12px;
+  height: 12px;
+  stroke: currentColor;
+  stroke-width: 3.5;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* When FAB is open -> Plus transforms into Close (X) */
+.whatsapp-fab.is-open .whatsapp-fab__btn {
   background: #0f172a;
+  border-color: #FFD600;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5), 0 0 16px rgba(255, 214, 0, 0.35);
+}
+
+.whatsapp-fab.is-open .whatsapp-fab__plus-badge {
+  background: #ef4444;
   color: #ffffff;
-  font-family: var(--font-body);
-  font-size: 0.82rem;
-  font-weight: 600;
-  white-space: nowrap;
-  padding: 0.45rem 0.85rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-color: #ffffff;
+  transform: scale(1.1);
+}
+
+.whatsapp-fab.is-open .whatsapp-fab__plus-badge svg {
+  transform: rotate(45deg);
+}
+
+/* Speed Dial Menu Container */
+.whatsapp-fab__menu {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  gap: 12px;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+  transform: translateY(14px) scale(0.92);
+  transform-origin: bottom right;
+  transition: opacity 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), visibility 0.28s;
   pointer-events: none;
 }
 
-.floating-whatsapp__tooltip::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: 100%;
-  transform: translateY(-50%);
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent #0f172a transparent transparent;
-}
-
-.floating-whatsapp:hover .floating-whatsapp__tooltip {
+.whatsapp-fab.is-open .whatsapp-fab__menu {
   opacity: 1;
   visibility: visible;
-  transform: translateY(-50%) translateX(0);
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
 }
 
-/* Mobile responsive positioning with iOS safe-area insets */
+/* Individual Option Row in Speed Dial */
+.whatsapp-fab__action {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none !important;
+  cursor: pointer;
+  pointer-events: auto;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: static !important;
+  bottom: auto !important;
+  left: auto !important;
+  right: auto !important;
+  width: auto !important;
+  height: auto !important;
+  filter: none !important;
+}
+
+.whatsapp-fab__action:hover {
+  transform: translateX(-4px) scale(1.03);
+}
+
+.whatsapp-fab__action:active {
+  transform: scale(0.97);
+}
+
+/* Label Pill on the Left of the Icon */
+.whatsapp-fab__label {
+  background: rgba(15, 23, 42, 0.94);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 0.42rem 0.95rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 214, 0, 0.35);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  white-space: nowrap;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.whatsapp-fab__action:hover .whatsapp-fab__label {
+  background: #0f172a;
+  border-color: #FFD600;
+  color: #FFD600;
+}
+
+/* Action Icon Circle */
+.whatsapp-fab__icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25), 0 0 12px rgba(37, 211, 102, 0.3);
+  overflow: hidden;
+  flex-shrink: 0;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
+}
+
+.whatsapp-fab__icon-wrap img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  display: block;
+  pointer-events: none;
+  transform: none !important;
+}
+
+.whatsapp-fab__action:hover .whatsapp-fab__icon-wrap {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+/* Locating state for GPS button */
+.whatsapp-fab__action.floating-location.is-locating .whatsapp-fab__icon-wrap {
+  animation: fabLocating 1.2s infinite ease-in-out;
+  box-shadow: 0 0 20px rgba(255, 214, 0, 0.9);
+}
+
+.whatsapp-fab__action.floating-location.is-locating .whatsapp-fab__label {
+  border-color: #FFD600;
+  color: #FFD600;
+}
+
+@keyframes fabLocating {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+
+/* Mobile Responsiveness for FAB */
 @media (max-width: 768px) {
-  .floating-whatsapp {
-    bottom: calc(76px + var(--safe-bottom));
-    left: calc(18px + var(--safe-left));
-    width: 52px;
-    height: 52px;
+  .whatsapp-fab {
+    bottom: calc(20px + var(--safe-bottom));
+    right: calc(18px + var(--safe-right));
+    gap: 10px;
   }
 
-  .floating-whatsapp__tooltip {
-    display: none;
+  .whatsapp-fab__btn {
+    width: 54px;
+    height: 54px;
+  }
+
+  .whatsapp-fab__icon-wa {
+    width: 28px;
+    height: 28px;
+  }
+
+  .whatsapp-fab__plus-badge {
+    width: 20px;
+    height: 20px;
+    top: -1px;
+    right: -1px;
+  }
+
+  .whatsapp-fab__plus-badge svg {
+    width: 10px;
+    height: 10px;
+  }
+
+  .whatsapp-fab__icon-wrap {
+    width: 46px;
+    height: 46px;
+  }
+
+  .whatsapp-fab__icon-wrap img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .whatsapp-fab__label {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.8rem;
   }
 }
 
@@ -4335,37 +4533,88 @@ button[href^="tel:"]:hover::before,
   100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 214, 0, 0); }
 }
 
+@media (max-width: 768px) {
+  .btn--whatsapp-location {
+    display: none !important;
+  }
+}
+
 @media (max-width: 600px) {
+  .hero__inner, .hero-inner {
+    gap: 1.25rem;
+  }
+
+  .hero__content {
+    max-width: 100%;
+  }
+
+  .hero__badge--rating {
+    font-size: 0.76rem;
+    padding: 0.32rem 0.75rem;
+    gap: 0.45rem;
+    margin-bottom: 0.85rem;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .hero__badge--rating .stars {
+    font-size: 0.82rem;
+    letter-spacing: 1px;
+  }
+
+  .hero__title, .hero h1 {
+    font-size: clamp(1.62rem, 6.8vw, 2.1rem);
+    line-height: 1.16;
+    margin-bottom: 0.85rem;
+    word-break: break-word;
+  }
+
+  .hero__sub, .hero__subtitle, .hero-sub {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin-bottom: 1.25rem;
+    color: #cbd5e1;
+  }
+
   .hero__ctas {
     flex-direction: column;
     width: 100%;
     align-items: stretch;
     gap: 0.75rem;
+    margin-bottom: 1.35rem;
   }
 
   .hero__ctas .btn {
     width: 100%;
-    padding: 0.55rem 1.15rem;
-    font-size: 0.92rem;
+    min-height: 48px;
+    padding: 0.65rem 1.35rem;
+    font-size: 1rem;
+    font-weight: 700;
     justify-content: center;
+    text-align: center;
   }
 
+  /* Hide redundant hero location button on mobile (available via floating FAB) */
   .btn--whatsapp-location {
-    font-size: 0.88rem;
-    padding: 0.36rem 1.1rem 0.36rem 0.45rem;
-    gap: 0.55rem;
+    display: none !important;
+  }
+
+  .trust-chips {
+    gap: 0.45rem;
     width: 100%;
-    justify-content: center;
   }
 
-  .btn-location-icon-wrap {
-    width: 28px;
-    height: 28px;
+  .trust-chip {
+    font-size: 0.76rem;
+    padding: 0.32rem 0.75rem;
+    gap: 0.35rem;
   }
 
-  .btn-location-icon-wrap img {
-    width: 20px;
-    height: 20px;
+  .trust-chip svg {
+    width: 14px;
+    height: 14px;
   }
 
   .partner-feat {
@@ -4398,118 +4647,8 @@ button[href^="tel:"]:hover::before,
 }
 
 /* ==========================================================================
-   30. FLOATING LOCATION BUTTON (Send Your Location on WhatsApp)
+   30. FLOATING LOCATION BUTTON (Integrated into WhatsApp FAB Speed Dial)
    ========================================================================== */
-.floating-location {
-  position: fixed;
-  bottom: 104px;
-  left: 28px;
-  width: 64px;
-  height: 64px;
-  background: transparent;
-  border: none;
-  filter: drop-shadow(0 6px 14px rgba(37, 211, 102, 0.55)) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
-  z-index: 998;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  text-decoration: none;
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
-  will-change: transform, filter;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.floating-location:hover {
-  transform: translateY(-4px) scale(1.1);
-  filter: drop-shadow(0 10px 24px rgba(37, 211, 102, 0.85)) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.45));
-}
-
-.floating-location:active {
-  transform: translateY(-1px) scale(0.98);
-}
-
-.floating-location:focus-visible {
-  outline: 3px solid #25D366;
-  outline-offset: 4px;
-  border-radius: 50%;
-}
-
-/* Pulsing radar ring - hidden so no circular background pulse is rendered */
 .floating-location__pulse {
-  display: none;
-}
-
-.floating-location img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-  pointer-events: none;
-  transform: scale(1.3);
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.floating-location:hover img {
-  transform: scale(1.38);
-}
-
-/* Locating state */
-.floating-location.is-locating {
-  filter: drop-shadow(0 0 20px rgba(255, 214, 0, 0.9)) drop-shadow(0 0 8px rgba(255, 214, 0, 0.6));
-  cursor: wait;
-}
-
-/* Tooltip on desktop */
-.floating-location__tooltip {
-  position: absolute;
-  left: calc(100% + 14px);
-  top: 50%;
-  transform: translateY(-50%) translateX(-6px);
-  background: #0f172a;
-  color: #ffffff;
-  font-family: var(--font-body);
-  font-size: 0.82rem;
-  font-weight: 600;
-  white-space: nowrap;
-  padding: 0.45rem 0.85rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
-  pointer-events: none;
-  z-index: 1000;
-}
-
-.floating-location__tooltip::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: 100%;
-  transform: translateY(-50%);
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent #0f172a transparent transparent;
-}
-
-.floating-location:hover .floating-location__tooltip {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(-50%) translateX(0);
-}
-
-/* Mobile responsive positioning with iOS safe-area insets */
-@media (max-width: 768px) {
-  .floating-location {
-    bottom: calc(138px + var(--safe-bottom));
-    left: calc(18px + var(--safe-left));
-    width: 52px;
-    height: 52px;
-  }
-
-  .floating-location__tooltip {
-    display: none;
-  }
+  display: none !important;
 }
