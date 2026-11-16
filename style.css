@@ -1693,20 +1693,31 @@ button[href^="tel:"]:hover::before,
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 46px;
-  max-width: 46px;
-  height: 46px;
+  min-width: 54px;
+  max-width: 54px;
+  height: 54px;
   border-radius: 50%;
-  background-color: var(--clr-accent);
-  color: var(--clr-dark);
+  background-color: transparent;
   box-shadow: none !important;
   flex-shrink: 0;
   transition: transform .35s cubic-bezier(0.25, 1, 0.5, 1);
   pointer-events: auto;
 }
 
-.option:hover .icon {
+.option .icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 50%;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.7));
+  transition: transform .35s ease, filter .35s ease;
+}
+
+.option:hover .icon img,
+.option.active .icon img {
   transform: scale(1.08);
+  filter: drop-shadow(0 6px 16px rgba(255, 214, 0, 0.45)) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.8));
 }
 
 .option .info {
@@ -1832,9 +1843,9 @@ button[href^="tel:"]:hover::before,
   }
 
   .option .icon {
-    min-width: 40px;
-    max-width: 40px;
-    height: 40px;
+    min-width: 44px;
+    max-width: 44px;
+    height: 44px;
   }
 
   .services-extra-bar {
