@@ -5137,9 +5137,14 @@ button[href^="tel:"]:hover::before,
 }
 
 .rsa-tracking-card__logo-wrap img {
-  height: 48px;
-  width: auto;
+  height: 52px;
+  width: 52px;
   object-fit: contain;
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 4px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  display: block;
 }
 
 .rsa-partner-actions {
