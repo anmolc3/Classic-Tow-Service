@@ -408,7 +408,7 @@ const SERVICES = [
     name: 'Food Truck Towing',
     shortTitle: 'Food Truck Towing',
     serviceType: 'Commercial Mobile Kitchen Relocation',
-    badge: 'Food Truck Towing Emblem.png',
+    badge: 'Food Truck Towing Emblem.webp',
     summary: 'Specialized low-incline zero-degree flatbed towing and commercial kitchen trailer relocation ensuring cooking equipment, propane fittings, and chassis integrity remain 100% secure.'
   },
   {
@@ -416,7 +416,7 @@ const SERVICES = [
     name: 'Heavy Towing',
     shortTitle: 'Heavy Towing',
     serviceType: 'High-Tonnage Commercial Vehicle & Wrecker Recovery',
-    badge: 'Heavy Tow Crane Emblem.png',
+    badge: 'Heavy Tow Crane Emblem.webp',
     summary: 'Heavy-duty wrecker services, underlift boom towing, and auxiliary pneumatic air line connections for commercial trucks, buses, trailers, and industrial vehicles with RSA Crane Service mobile crane support.'
   },
   {
@@ -424,7 +424,7 @@ const SERVICES = [
     name: 'Accident Recovery',
     shortTitle: 'Accident Recovery',
     serviceType: 'Emergency Collision Extraction & Garage Transport',
-    badge: 'Accident Recovery Tow Truck Badge.png',
+    badge: 'Accident Recovery Tow Truck Badge.webp',
     summary: '24/7 emergency roadside extraction, rollover uprighting, ditch winching, and damage-free flatbed transport directly to authorized dealerships and insurance inspection garages.'
   }
 ];

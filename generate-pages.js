@@ -636,7 +636,7 @@ function generateCityPages() {
           <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:1.5rem; box-shadow:0 2px 4px rgba(0,0,0,0.04); display:flex; flex-direction:column; justify-content:space-between;">
             <div>
               <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1rem;">
-                <img src="../Food%20Truck%20Towing%20Emblem.png" alt="Food Truck Towing ${city.name}" width="48" height="48" loading="lazy" />
+                <img src="../Food%20Truck%20Towing%20Emblem.webp" alt="Food Truck Towing ${city.name}" width="48" height="48" loading="lazy" />
                 <h3 style="font-size:1.3rem; margin:0; color:var(--clr-primary);">Food Truck Towing</h3>
               </div>
               <p style="font-size:0.95rem; color:#475569; line-height:1.6; margin-bottom:1rem;">
@@ -649,7 +649,7 @@ function generateCityPages() {
           <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:1.5rem; box-shadow:0 2px 4px rgba(0,0,0,0.04); display:flex; flex-direction:column; justify-content:space-between;">
             <div>
               <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1rem;">
-                <img src="../Heavy%20Tow%20Crane%20Emblem.png" alt="Heavy Towing ${city.name}" width="48" height="48" loading="lazy" />
+                <img src="../Heavy%20Tow%20Crane%20Emblem.webp" alt="Heavy Towing ${city.name}" width="48" height="48" loading="lazy" />
                 <h3 style="font-size:1.3rem; margin:0; color:var(--clr-primary);">Heavy Vehicle Towing</h3>
               </div>
               <p style="font-size:0.95rem; color:#475569; line-height:1.6; margin-bottom:1rem;">
@@ -662,7 +662,7 @@ function generateCityPages() {
           <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:1.5rem; box-shadow:0 2px 4px rgba(0,0,0,0.04); display:flex; flex-direction:column; justify-content:space-between;">
             <div>
               <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1rem;">
-                <img src="../Accident%20Recovery%20Tow%20Truck%20Badge.png" alt="Accident Recovery ${city.name}" width="48" height="48" loading="lazy" />
+                <img src="../Accident%20Recovery%20Tow%20Truck%20Badge.webp" alt="Accident Recovery ${city.name}" width="48" height="48" loading="lazy" />
                 <h3 style="font-size:1.3rem; margin:0; color:var(--clr-primary);">Accident Recovery</h3>
               </div>
               <p style="font-size:0.95rem; color:#475569; line-height:1.6; margin-bottom:1rem;">
