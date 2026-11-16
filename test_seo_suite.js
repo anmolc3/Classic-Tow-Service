@@ -52,6 +52,14 @@ htmlFiles.forEach(file => {
     warnings.push(`[${file}] Missing complete Open Graph tags.`);
   }
 
+  // 3b. Google Tag Manager check
+  if (!content.includes('GTM-MQ2N999C')) {
+    errors.push(`[${file}] Missing Google Tag Manager script in <head>.`);
+  }
+  if (!content.includes('ns.html?id=GTM-MQ2N999C')) {
+    errors.push(`[${file}] Missing Google Tag Manager noscript in <body>.`);
+  }
+
   // 4. H1 check
   const h1Matches = content.match(/<h1[^>]*>([\s\S]*?)<\/h1>/gi);
   if (!h1Matches) {

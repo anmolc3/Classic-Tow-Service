@@ -50,10 +50,24 @@ function getHead({ title, description, canonical, rel = '', schema = [] }) {
   <!-- Stylesheet -->
   <link rel="stylesheet" href="${rel}style.css" />
 
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MQ2N999C"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  </script>
+  <!-- End Google Tag Manager -->
+
   <!-- Structured Data -->
 ${schemaMarkup}
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQ2N999C"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <!-- Top Bar -->
