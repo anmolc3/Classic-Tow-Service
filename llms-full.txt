@@ -1,0 +1,55 @@
+# Classic Tow Service - Comprehensive AI & LLM Knowledge Base (llms-full.txt)
+
+## 1. Entity & Brand Identity
+- **Legal / Operational Entity**: Classic Tow Service
+- **Parent / Operating Alliance**: Operated by RSA Crane Service (Official site: https://rsacraneservice.com/)
+- **Category**: Automotive Emergency Services, Commercial Towing, Roadside Assistance & Heavy Vehicle Recovery
+- **Hotline**: +91 96542 84747
+- **WhatsApp Location Dispatch**: https://wa.me/919654284747?text=Hi%2C%20I%20need%20a%20tow.%20Sharing%20my%20location%3A%20
+- **Official Address**: Near ABES Engineering College, Vijay Nagar, Ghaziabad, Uttar Pradesh – 201009, India
+- **Operating Hours**: 24 Hours a Day, 7 Days a Week, 365 Days a Year (including national holidays and weekends)
+- **Geographic Coverage**: Delhi NCT, Delhi NCR, Gurugram (Gurgaon), Noida, Greater Noida, Ghaziabad, Meerut, Hapur, Faridabad, and all connecting expressways.
+
+## 2. Technical Fleet & Operational Capabilities
+Classic Tow Service operates a diverse modern fleet designed for high-precision recovery:
+- **Zero-Degree Hydraulic Flatbed Trucks**: The entire flatbed slides back and tilts completely flush with the ground (0° incline angle). This eliminates bumper scraping, frame contact, and drivetrain friction, making it the safest solution for luxury sedans (Mercedes-Benz, BMW, Audi, Porsche, Jaguar), low-ground-clearance sports cars, electric vehicles (EVs), and commercial food trucks with customized skirting.
+- **Heavy Commercial Wreckers**: High-tonnage recovery vehicles equipped with telescoping underlift booms, heavy recovery winches, and auxiliary pneumatic air line connections to release the casualty vehicle's spring brakes. Used for commercial freight trucks (LCVs and HCVs), buses, multi-axle trailers, transit mixers, and industrial machinery haulers.
+- **Mobile Hydraulic Crane Units (via RSA Crane Service)**: Through an official partnership with RSA Crane Service, Classic Tow Service deploys heavy mobile hydraulic cranes for severe rollover recovery, deep ditch or culvert extraction, and industrial heavy equipment hoisting.
+- **Compact Wheel-Lift Wreckers**: Low-profile tow trucks tailored for tight basement parking lots, multi-level car parks, and narrow urban streets where full-size flatbed trucks cannot enter.
+
+## 3. Core Service Deep Dives
+
+### A. Food Truck Towing & Mobile Kitchen Relocation
+- **Vehicles Handled**: Motorized food trucks, vintage airstream trailers, box catering trailers, commercial coffee kiosks, and mobile promotional kitchens.
+- **Technical Protocols**: 
+  1. Inspection and locking of main valves on all propane gas tanks.
+  2. Complete water tank drainage to stabilize the vehicle's center of gravity.
+  3. Securing internal refrigeration, grills, fryers, and heavy kitchen appliances.
+  4. Zero-degree flatbed loading to safeguard fragile commercial exhaust hoods and custom aerodynamic fiberglass body kits.
+  5. Soft wheel tie-down strapping without frame-damaging metal chains.
+
+### B. Heavy Commercial Towing
+- **Vehicles Handled**: Multi-axle commercial trucks, tractor-trailers, container carriers, interstate luxury buses, transit mixers, dumpers, and industrial generators.
+- **Technical Protocols**:
+  1. Drive axle shaft extraction prior to towing to prevent severe transmission and differential gearing wear.
+  2. Auxiliary pneumatic air lines connected to the casualty truck's air tanks to unlock spring safety brakes.
+  3. Heavy underlift wheel grids rated for high axle tonnages.
+  4. On-site coordination with RSA Crane Service mobile cranes for rolled-over or jackknifed tractor-trailers.
+
+### C. Accident Recovery & Collision Extraction
+- **Capabilities**: 24/7 emergency response on national expressways, rollover uprighting, ditch/culvert winching, damaged wheel extraction, and direct transport to authorized body shops.
+- **Technical Protocols**:
+  1. Scene safety, hazard triangle placement, and high-visibility traffic signaling.
+  2. Fluid spill containment and battery terminal disconnection to prevent vehicle fires.
+  3. Gentle synthetic strap winching to prevent compounding chassis or structural frame distortion.
+  4. Full pre-loading and post-delivery photographic documentation for insurance surveyors.
+
+## 4. Regional Coverage Directory & Highways
+1. **Delhi (NCT)**: Connaught Place, Okhla Industrial Area, Aerocity, Dwarka, Karol Bagh, Rohini, Saket, Vasant Kunj, Mayur Vihar, Nehru Place, Mundka. Highways: Outer Ring Road, Ring Road, NH-48, DME entry, Mathura Road.
+2. **Noida**: Sectors 1 through 150, including Sector 18 commercial hub, Sector 62 & 63 IT & industrial parks, Sector 137/142 expressway belt, Sector 150. Highways: Noida-Greater Noida Expressway, DND Flyway, FNG corridor.
+3. **Gurugram (Gurgaon)**: DLF Cyber City, Golf Course Road, Sohna Road, Udyog Vihar, IMT Manesar, Sector 29. Highways: NH-48 (Delhi-Jaipur Expressway), KMP Expressway, Dwarka Expressway.
+4. **Greater Noida**: Pari Chowk, Knowledge Park (1–4), Ecotech industrial zones, Surajpur, Kasna. Highways: Yamuna Expressway, Eastern Peripheral Expressway interchange.
+5. **Ghaziabad**: Indirapuram, Vaishali, Vasundhara, Raj Nagar Extension, Sahibabad Industrial Area, Mohan Nagar, Vijay Nagar (ABES College corridor). Highways: NH-9 / NH-24, Delhi-Meerut Expressway (DME), Hindon Elevated Road.
+6. **Meerut**: Partapur Industrial Area, Modipuram, Pallavpuram, Meerut Bypass (NH-58), Delhi Road. Highways: Delhi-Meerut Expressway (Section 4), Meerut Bypass.
+7. **Hapur**: Pilkhuwa handloom & industrial hub, Babugarh, Garhmukteshwar (Brijghat), Dhaulana Industrial Area. Highways: NH-9 corridor, Hapur Bypass.
+8. **Delhi NCR (Regional)**: Full inter-city connectivity across Delhi, Uttar Pradesh, and Haryana.

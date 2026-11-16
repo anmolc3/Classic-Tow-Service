@@ -1,8 +1,9 @@
-# robots.txt — Classic Tow Service
-# https://classictowservice.com
-
 User-agent: *
 Allow: /
-Disallow: /thank-you.html
 
+# Sitemaps
 Sitemap: https://classictowservice.com/sitemap.xml
+
+# LLM & AI Knowledge Files
+Allow: /llms.txt
+Allow: /llms-full.txt

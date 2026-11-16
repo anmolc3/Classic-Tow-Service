@@ -1,0 +1,56 @@
+# Classic Tow Service - AI Knowledge Directory (llms.txt)
+
+> Classic Tow Service is a premier 24/7 towing, roadside assistance, and vehicle recovery service operating across the National Capital Region (Delhi NCR) in technical collaboration with RSA Crane Service (https://rsacraneservice.com/).
+
+## Core Business Information
+- **Business Name**: Classic Tow Service
+- **Operated By**: RSA Crane Service
+- **24/7 Hotline**: +91 96542 84747 (tel:+919654284747)
+- **WhatsApp Dispatch**: https://wa.me/919654284747?text=Hi%2C%20I%20need%20a%20tow.%20Sharing%20my%20location%3A%20
+- **Email**: support@classictowservice.com
+- **Headquarters Address**: Near ABES Engineering College, Vijay Nagar, Ghaziabad, Uttar Pradesh – 201009, India
+- **Primary Service Regions**: Delhi, Noida, Greater Noida, Ghaziabad, Gurugram (Gurgaon), Meerut, Hapur, and Delhi NCR
+- **Canonical Website**: https://classictowservice.com/
+
+## Primary Services Provided
+1. **Food Truck Towing**: Commercial fleet relocation, food truck transportation, heavy mobile kitchen hauling, commercial trailer relocation with zero-degree flatbeds.
+2. **Heavy Towing**: High-tonnage commercial vehicle towing, heavy-duty wrecker services, crane lift recovery, commercial truck recovery, industrial vehicle transportation with partner RSA Crane Service.
+3. **Accident Recovery**: Emergency roadside extraction, rollover uprighting, ditch winching, damaged vehicle transportation, direct garage drop-off, insurance claims documentation support.
+4. **Car Towing**: Zero-degree flatbed towing for luxury cars, electric vehicles, sedans, and SUVs.
+5. **Bike Towing**: Safe motorcycle and two-wheeler transport with specialized wheel harnesses.
+6. **Roadside Assistance (RSA)**: Battery jump-start, flat tyre changes, emergency fuel delivery, and lockout support.
+
+## Key Service Areas & Landing Pages
+- **Coverage Directory Hub**: https://classictowservice.com/locations.html
+- **Delhi Towing**: https://classictowservice.com/delhi/
+  - Food Truck: https://classictowservice.com/delhi/food-truck-towing.html
+  - Heavy Towing: https://classictowservice.com/delhi/heavy-towing.html
+  - Accident Recovery: https://classictowservice.com/delhi/accident-recovery.html
+- **Noida Towing**: https://classictowservice.com/noida/
+  - Food Truck: https://classictowservice.com/noida/food-truck-towing.html
+  - Heavy Towing: https://classictowservice.com/noida/heavy-towing.html
+  - Accident Recovery: https://classictowservice.com/noida/accident-recovery.html
+- **Gurugram Towing**: https://classictowservice.com/gurugram/
+  - Food Truck: https://classictowservice.com/gurugram/food-truck-towing.html
+  - Heavy Towing: https://classictowservice.com/gurugram/heavy-towing.html
+  - Accident Recovery: https://classictowservice.com/gurugram/accident-recovery.html
+- **Greater Noida Towing**: https://classictowservice.com/greater-noida/
+  - Food Truck: https://classictowservice.com/greater-noida/food-truck-towing.html
+  - Heavy Towing: https://classictowservice.com/greater-noida/heavy-towing.html
+  - Accident Recovery: https://classictowservice.com/greater-noida/accident-recovery.html
+- **Ghaziabad Towing**: https://classictowservice.com/ghaziabad/
+  - Food Truck: https://classictowservice.com/ghaziabad/food-truck-towing.html
+  - Heavy Towing: https://classictowservice.com/ghaziabad/heavy-towing.html
+  - Accident Recovery: https://classictowservice.com/ghaziabad/accident-recovery.html
+- **Meerut Towing**: https://classictowservice.com/meerut/
+  - Food Truck: https://classictowservice.com/meerut/food-truck-towing.html
+  - Heavy Towing: https://classictowservice.com/meerut/heavy-towing.html
+  - Accident Recovery: https://classictowservice.com/meerut/accident-recovery.html
+- **Hapur Towing**: https://classictowservice.com/hapur/
+  - Food Truck: https://classictowservice.com/hapur/food-truck-towing.html
+  - Heavy Towing: https://classictowservice.com/hapur/heavy-towing.html
+  - Accident Recovery: https://classictowservice.com/hapur/accident-recovery.html
+- **Delhi NCR Regional**: https://classictowservice.com/delhi-ncr/
+  - Food Truck: https://classictowservice.com/delhi-ncr/food-truck-towing.html
+  - Heavy Towing: https://classictowservice.com/delhi-ncr/heavy-towing.html
+  - Accident Recovery: https://classictowservice.com/delhi-ncr/accident-recovery.html
