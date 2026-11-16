@@ -559,18 +559,24 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-/* Footer logo text preservation on dark footer */
+/* Footer logo styling (matches header brand colors on light footer) */
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: .65rem;
+  text-decoration: none;
+}
 .footer .logo-text, .footer-col .logo-text {
-  color: var(--clr-white) !important;
+  color: #0f172a !important;
 }
 .footer .logo-classic, .footer-col .logo-classic {
-  color: var(--clr-accent) !important;
+  color: #eab308 !important;
 }
 .footer .logo-text span, .footer-col .logo-text span {
-  color: var(--clr-white) !important;
+  color: #1e3a8a !important;
 }
 .footer .logo-subline, .footer-col .logo-subline {
-  color: rgba(255, 255, 255, .72) !important;
+  color: #475569 !important;
 }
 .footer .logo-subline strong, .footer-col .logo-subline strong,
 .footer .logo-rsa, .footer-col .logo-rsa {
@@ -3136,8 +3142,8 @@ button[href^="tel:"]:hover::before,
    19. FOOTER
    ========================================================================== */
 .site-footer {
-  background: var(--clr-darker);
-  color: var(--clr-gray-300);
+  background: #ffffff;
+  color: #334155;
   padding-top: 4.5rem;
   border-top: 3px solid var(--clr-accent);
 }
@@ -3171,7 +3177,7 @@ button[href^="tel:"]:hover::before,
   font-family: var(--font-heading);
   font-size: 1.15rem;
   font-weight: 700;
-  color: var(--clr-white);
+  color: #0f172a;
   text-transform: uppercase;
   letter-spacing: .05em;
   position: relative;
@@ -3191,7 +3197,7 @@ button[href^="tel:"]:hover::before,
 
 .footer-col p {
   font-size: .92rem;
-  color: var(--clr-text-light);
+  color: #475569;
   line-height: 1.7;
 }
 
@@ -3202,14 +3208,14 @@ button[href^="tel:"]:hover::before,
 }
 
 .footer-links a, .footer-col ul a {
-  color: var(--clr-gray-300);
+  color: #334155;
   font-size: .92rem;
   transition: all var(--transition-fast);
   display: inline-block;
 }
 
 .footer-links a:hover, .footer-col ul a:hover {
-  color: var(--clr-accent);
+  color: #b45309;
   transform: translateX(4px);
 }
 
@@ -3218,26 +3224,26 @@ button[href^="tel:"]:hover::before,
   display: flex;
   flex-direction: column;
   gap: .6rem;
-  color: var(--clr-text-light);
+  color: #475569;
   font-size: .92rem;
 }
 
 .footer-col address a {
-  color: var(--clr-gray-300);
+  color: #334155;
 }
 
 .footer-col address a:hover {
-  color: var(--clr-accent);
+  color: #b45309;
 }
 
 .footer-partner {
   margin-top: .75rem;
   font-size: .85rem;
-  color: var(--clr-text-light);
+  color: #475569;
 }
 
 .footer-partner a {
-  color: var(--clr-accent);
+  color: #b45309;
   font-weight: 600;
 }
 
@@ -3249,7 +3255,7 @@ button[href^="tel:"]:hover::before,
   display: inline-flex;
   align-items: center;
   gap: .4rem;
-  color: var(--clr-accent);
+  color: #b45309;
   font-weight: 600;
   font-size: .9rem;
   margin-top: .5rem;
@@ -3260,11 +3266,11 @@ button[href^="tel:"]:hover::before,
 }
 
 .footer-bottom {
-  background: #060910;
-  border-top: 1px solid rgba(255, 255, 255, .08);
+  background: #f1f5f9;
+  border-top: 1px solid #e2e8f0;
   padding-block: 1.5rem;
   font-size: .85rem;
-  color: var(--clr-text-muted);
+  color: #64748b;
 }
 
 .footer-bottom .container {
@@ -3283,11 +3289,11 @@ button[href^="tel:"]:hover::before,
 }
 
 .footer-bottom a {
-  color: var(--clr-text-light);
+  color: #475569;
 }
 
 .footer-bottom a:hover {
-  color: var(--clr-accent);
+  color: #b45309;
 }
 
 /* ==========================================================================
