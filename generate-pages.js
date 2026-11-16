@@ -138,29 +138,34 @@ ${schemaMarkup}
 function getFooter({ rel = '' }) {
   return `
   <!-- Footer -->
-  <footer class="site-footer" id="site-footer">
-    <div class="container site-footer__inner">
-      <div class="footer-col footer-col--brand">
+  <footer class="site-footer" role="contentinfo">
+    <div class="container site-footer__grid">
+
+      <div class="footer-col footer-col--about">
         <a href="${rel}index.html" class="footer-logo" aria-label="Classic Tow Service – Home">
-          <img src="${rel}classic%20tow%20logo%20without%20text.webp" alt="Classic Tow Service Logo" width="48" height="48" loading="lazy" />
+          <img src="${rel}classic%20tow%20logo%20without%20text.webp" alt="Classic Tow Service Logo" width="44" height="44" />
           <div class="logo-wrap">
             <span class="logo-text"><span class="logo-classic">Classic</span> Tow <span>Service</span></span>
             <span class="logo-subline">Operated by <strong class="logo-rsa">RSA Crane Service</strong></span>
           </div>
         </a>
-        <p class="footer-tagline">
-          24/7 towing and emergency vehicle recovery across Delhi NCR. Certified flatbed towing, heavy commercial wreckers, and roadside assistance.
-        </p>
-        <div class="footer-badges">
-          <span class="footer-badge">24/7 Available</span>
-          <span class="footer-badge">Delhi NCR Wide</span>
-          <span class="footer-badge">Zero-Degree Flatbed</span>
-        </div>
+        <p>Classic Tow Service provides professional 24/7 towing and roadside assistance. Fast dispatch, damage-free flatbed transport, transparent pricing.</p>
+        <a href="https://www.google.com/maps/place/Classic+Tow+Service/@28.6337457,77.4447393,17z/data=!3m1!4b1!4m6!3m5!1s0x390cef97860fad71:0xb1f25d6682b31203!8m2!3d28.6337457!4d77.4447393!16s%2Fg%2F11k3hl3rg5?hl=en-IN" class="btn--gold-badge btn--gold-badge--footer" target="_blank" rel="noopener noreferrer" aria-label="Find Classic Tow Service on Google Maps">
+          <span class="btn--gold-badge__badge">
+            <img src="${rel}google-maps-pin.svg" alt="Google Maps" width="20" height="26" loading="lazy" />
+          </span>
+          <span class="btn--gold-badge__text">
+            <span>Find Us on</span> <strong>Google Maps</strong>
+          </span>
+          <span class="btn--gold-badge__arrow" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </span>
+        </a>
       </div>
 
-      <div class="footer-col footer-col--links">
+      <div class="footer-col">
         <h3 class="footer-col__heading">Quick Links</h3>
-        <ul class="footer-nav" role="list">
+        <ul class="footer-links" role="list">
           <li><a href="${rel}index.html">Home</a></li>
           <li><a href="${rel}about-us.html">About Us</a></li>
           <li><a href="${rel}services.html">All Services</a></li>
@@ -171,9 +176,9 @@ function getFooter({ rel = '' }) {
         </ul>
       </div>
 
-      <div class="footer-col footer-col--services">
+      <div class="footer-col">
         <h3 class="footer-col__heading">Our Services</h3>
-        <ul class="footer-nav" role="list">
+        <ul class="footer-links" role="list">
           <li><a href="${rel}car-towing.html">Car Towing</a></li>
           <li><a href="${rel}bike-towing.html">Bike Towing</a></li>
           <li><a href="${rel}zero-degree-flatbed-towing.html">Zero Degree Flatbed Towing</a></li>
@@ -182,20 +187,6 @@ function getFooter({ rel = '' }) {
           <li><a href="${rel}breakdown-accident-recovery.html">Breakdown &amp; Accident Recovery</a></li>
           <li><a href="${rel}scrap-vehicle-towing.html">Scrap Vehicle Towing</a></li>
           <li><a href="${rel}rsa-assistance.html">RSA Assistance</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col--locations">
-        <h3 class="footer-col__heading">Service Locations</h3>
-        <ul class="footer-nav" role="list">
-          <li><a href="${rel}delhi/index.html">Delhi Towing</a></li>
-          <li><a href="${rel}noida/index.html">Noida Towing</a></li>
-          <li><a href="${rel}gurugram/index.html">Gurugram Towing</a></li>
-          <li><a href="${rel}greater-noida/index.html">Greater Noida Towing</a></li>
-          <li><a href="${rel}ghaziabad/index.html">Ghaziabad Towing</a></li>
-          <li><a href="${rel}meerut/index.html">Meerut Towing</a></li>
-          <li><a href="${rel}hapur/index.html">Hapur Towing</a></li>
-          <li><a href="${rel}delhi-ncr/index.html">Delhi NCR Towing</a></li>
         </ul>
       </div>
 
@@ -221,23 +212,22 @@ function getFooter({ rel = '' }) {
           </p>
           <p>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
-            Available 24 Hours / 7 Days
+            Available 24/7
           </p>
         </address>
         <p class="footer-partner">
-          <span>In technical collaboration with:</span>
-          <a href="https://rsacraneservice.com/" target="_blank" rel="noopener noreferrer" class="inline-link" aria-label="Visit RSA Crane Service website">RSA Crane Service</a>
+          <span>Operated by:</span>
+          <a href="https://rsacraneservice.com/" target="_blank" rel="noopener noreferrer" class="inline-link" aria-label="Visit RSA Crane Service">RSA Crane Service</a>
         </p>
       </div>
-    </div>
 
+    </div>
     <div class="footer-bottom">
       <div class="container footer-bottom__inner">
         <p>&copy; 2024 Classic Tow Service. All rights reserved.</p>
         <nav aria-label="Legal links">
           <a href="${rel}privacy-policy.html">Privacy Policy</a>
           <a href="${rel}terms-and-conditions.html">Terms &amp; Conditions</a>
-          <a href="${rel}locations.html">Coverage Directory</a>
         </nav>
       </div>
     </div>
