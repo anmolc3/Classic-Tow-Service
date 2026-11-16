@@ -473,13 +473,21 @@ function generateLocationsHub() {
     </section>
 
     <!-- Emergency CTA -->
-    <section class="section" style="background:var(--clr-primary); color:#fff; text-align:center; padding:4rem 0;">
-      <div class="container" style="max-width:800px;">
-        <h2 style="font-size:2.25rem; color:#fff; margin-bottom:1rem;">Need Immediate Towing Assistance Anywhere in Delhi NCR?</h2>
-        <p style="font-size:1.15rem; color:#cbd5e1; margin-bottom:2rem;">Our 24/7 dispatch control room is ready to mobilize the nearest flatbed or heavy wrecker to your exact location right now.</p>
-        <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
-          <a href="tel:${PHONE_TEL}" class="btn btn--accent btn--lg">Call +91 96542 84747</a>
-          <a href="${WA_LINK}" class="btn btn--outline btn--lg" style="color:#fff; border-color:#fff;" onclick="sendLocationOnWhatsApp(event)">Share Live Location on WhatsApp</a>
+    <section class="cta-band" aria-labelledby="cta-band-heading">
+      <div class="container cta-band__inner">
+        <h2 id="cta-band-heading" class="cta-band__title">Need Immediate Towing Assistance Anywhere in Delhi NCR?</h2>
+        <p class="cta-band__sub">Our 24/7 dispatch control room is ready to mobilize the nearest flatbed or heavy wrecker to your exact location right now.</p>
+        <div class="cta-band__btns">
+          <a href="tel:${PHONE_TEL}" class="btn btn--accent btn--lg" aria-label="Call Classic Tow Service now">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            Call ${PHONE_DISPLAY}
+          </a>
+          <a href="${WA_LINK}" class="btn btn--whatsapp-location btn--lg" onclick="sendLocationOnWhatsApp(event)" aria-label="Send your location on WhatsApp">
+            <span class="btn-location-icon-wrap" aria-hidden="true">
+              <img src="WhatsApp%20Location%20Sharing%20Icon.webp" alt="WhatsApp Location Sharing Icon" width="28" height="28" loading="lazy">
+            </span>
+            <span>Share Live Location on WhatsApp</span>
+          </a>
         </div>
       </div>
     </section>
@@ -714,13 +722,21 @@ function generateCityPages() {
     </section>
 
     <!-- Bottom Emergency CTA -->
-    <section class="section" style="background:var(--clr-primary); color:#fff; text-align:center; padding:3.5rem 0;">
-      <div class="container" style="max-width:800px;">
-        <h2 style="font-size:2.2rem; color:#fff; margin-bottom:1rem;">Stranded in ${city.name}? Call Classic Tow Service 24/7</h2>
-        <p style="font-size:1.1rem; color:#cbd5e1; margin-bottom:2rem;">Immediate flatbed and heavy commercial dispatch ready across all sectors of ${city.name}.</p>
-        <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
-          <a href="tel:${PHONE_TEL}" class="btn btn--accent btn--lg">Call ${PHONE_DISPLAY}</a>
-          <a href="${WA_LINK}" class="btn btn--outline btn--lg" style="color:#fff; border-color:#fff;" onclick="sendLocationOnWhatsApp(event)">Send GPS Location on WhatsApp</a>
+    <section class="cta-band" aria-labelledby="cta-band-heading">
+      <div class="container cta-band__inner">
+        <h2 id="cta-band-heading" class="cta-band__title">Stranded in ${city.name}? Call Classic Tow Service 24/7</h2>
+        <p class="cta-band__sub">Immediate flatbed and heavy commercial dispatch ready across all sectors of ${city.name}.</p>
+        <div class="cta-band__btns">
+          <a href="tel:${PHONE_TEL}" class="btn btn--accent btn--lg" aria-label="Call Classic Tow Service now">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            Call ${PHONE_DISPLAY}
+          </a>
+          <a href="${WA_LINK}" class="btn btn--whatsapp-location btn--lg" onclick="sendLocationOnWhatsApp(event)" aria-label="Send your location on WhatsApp">
+            <span class="btn-location-icon-wrap" aria-hidden="true">
+              <img src="../WhatsApp%20Location%20Sharing%20Icon.webp" alt="WhatsApp Location Sharing Icon" width="28" height="28" loading="lazy">
+            </span>
+            <span>Send GPS Location on WhatsApp</span>
+          </a>
         </div>
       </div>
     </section>
@@ -962,13 +978,21 @@ function generateServiceCityPages() {
     </section>
 
     <!-- Bottom Emergency CTA -->
-    <section class="section" style="background:var(--clr-primary); color:#fff; text-align:center; padding:3.5rem 0;">
-      <div class="container" style="max-width:800px;">
-        <h2 style="font-size:2.2rem; color:#fff; margin-bottom:1rem;">Need ${service.name} in ${city.name}?</h2>
-        <p style="font-size:1.1rem; color:#cbd5e1; margin-bottom:2rem;">Contact our 24/7 recovery dispatch center for instant pricing and rapid truck mobilization.</p>
-        <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
-          <a href="tel:${PHONE_TEL}" class="btn btn--accent btn--lg">Call ${PHONE_DISPLAY}</a>
-          <a href="${WA_LINK}" class="btn btn--outline btn--lg" style="color:#fff; border-color:#fff;" onclick="sendLocationOnWhatsApp(event)">WhatsApp Dispatch</a>
+    <section class="cta-band" aria-labelledby="cta-band-heading">
+      <div class="container cta-band__inner">
+        <h2 id="cta-band-heading" class="cta-band__title">Need ${service.name} in ${city.name}?</h2>
+        <p class="cta-band__sub">Contact our 24/7 recovery dispatch center for instant pricing and rapid truck mobilization.</p>
+        <div class="cta-band__btns">
+          <a href="tel:${PHONE_TEL}" class="btn btn--accent btn--lg" aria-label="Call Classic Tow Service now">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            Call ${PHONE_DISPLAY}
+          </a>
+          <a href="${WA_LINK}" class="btn btn--whatsapp-location btn--lg" onclick="sendLocationOnWhatsApp(event)" aria-label="Send your location on WhatsApp">
+            <span class="btn-location-icon-wrap" aria-hidden="true">
+              <img src="../WhatsApp%20Location%20Sharing%20Icon.webp" alt="WhatsApp Location Sharing Icon" width="28" height="28" loading="lazy">
+            </span>
+            <span>WhatsApp Dispatch</span>
+          </a>
         </div>
       </div>
     </section>
