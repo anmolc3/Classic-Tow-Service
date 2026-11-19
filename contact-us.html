@@ -198,6 +198,7 @@
               <li><a href="rsa-assistance.html">RSA Assistance</a></li>
             </ul>
           </li>
+          <li class="nav-item"><a href="locations.html" class="nav-link">Locations</a></li>
           <li class="nav-item active"><a href="contact-us.html" class="nav-link active" aria-current="page">Contact Us</a></li>
         </ul>
       </nav>
@@ -411,34 +412,59 @@
                   </p>
                 </div>
               </div>
-
-              <div>
-                <a href="https://www.google.com/maps/place/Classic+Tow+Service/@28.6337457,77.4447393,17z/data=!3m1!4b1!4m6!3m5!1s0x390cef97860fad71:0xb1f25d6682b31203!8m2!3d28.6337457!4d77.4447393!16s%2Fg%2F11k3hl3rg5?hl=en-IN" target="_blank" rel="noopener noreferrer" class="btn--gold-badge btn--gold-badge--footer" style="width: 100%; justify-content: space-between;" aria-label="Find Classic Tow Service on Google Maps">
-                  <span class="btn--gold-badge__badge">
-                    <img src="google-maps-pin.svg" alt="Google Maps" width="20" height="26" loading="lazy" />
-                  </span>
-                  <span class="btn--gold-badge__text">
-                    <span>Find Us on</span> <strong>Google Maps</strong>
-                  </span>
-                  <span class="btn--gold-badge__arrow" aria-hidden="true">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                  </span>
-                </a>
-              </div>
             </div>
 
-            <!-- Google Maps Embed Card -->
-            <div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--clr-gray-mid); background: var(--clr-gray);">
+            <!-- Google Maps Embed Card with Overlapping Action Button -->
+            <div class="map-embed-container" style="position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border: 1px solid var(--clr-gray-mid); background: var(--clr-gray);">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.996459388147!2d77.44216437633215!3d28.633745675664126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef97860fad71%3A0xb1f25d6682b31203!2sClassic%20Tow%20Service!5e0!3m2!1sen!2sin!4v1715000000000!5m2!1sen!2sin"
                 width="100%"
-                height="340"
+                height="380"
                 style="border:0; display: block;"
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
                 title="Classic Tow Service location map">
               </iframe>
+
+              <!-- Preserved Business Information Card (Conserves name, address & 4.9 rating while eliminating the redundant blue button) -->
+              <div class="map-place-card" style="position: absolute; top: 10px; left: 10px; z-index: 4; background: #ffffff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.22); padding: 12px 14px; width: calc(100% - 24px); max-width: 310px; min-height: 146px; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; pointer-events: auto;">
+                <div style="font-size: 15px; font-weight: 700; color: #202124; margin-bottom: 4px; line-height: 1.25;">
+                  Classic Tow Service
+                </div>
+                <div style="font-size: 12px; color: #5f6368; line-height: 1.4; margin-bottom: 8px;">
+                  LG - 34, Orbit plaza, near ABES ENGINEERING COLLEGE, Crossings Republik, Ghaziabad, Uttar Pradesh 201009
+                </div>
+                <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 4px; font-size: 13px; color: #202124;">
+                  <span style="font-weight: 700; color: #202124;">4.9</span>
+                  <span style="color: #e7711b; display: inline-flex; align-items: center;" aria-label="5 stars rating">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#e7711b"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#e7711b"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#e7711b"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#e7711b"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#e7711b"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  </span>
+                  <a href="https://www.google.com/maps/place/Classic+Tow+Service/@28.6337457,77.4447393,17z/data=!3m1!4b1!4m6!3m5!1s0x390cef97860fad71:0xb1f25d6682b31203!8m2!3d28.6337457!4d77.4447393!16s%2Fg%2F11k3hl3rg5?hl=en-IN" target="_blank" rel="noopener noreferrer" style="color: #1a73e8; font-weight: 500; text-decoration: none;">(99)</a>
+                  <span style="display: inline-flex; align-items: center; color: #5f6368; margin-left: 2px;" title="Verified Business Profile">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Overlapping Button (compact centered badge) -->
+              <div style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); z-index: 5; pointer-events: auto; width: max-content; max-width: calc(100% - 20px); display: flex; justify-content: center;">
+                <a href="https://www.google.com/maps/place/Classic+Tow+Service/@28.6337457,77.4447393,17z/data=!3m1!4b1!4m6!3m5!1s0x390cef97860fad71:0xb1f25d6682b31203!8m2!3d28.6337457!4d77.4447393!16s%2Fg%2F11k3hl3rg5?hl=en-IN" target="_blank" rel="noopener noreferrer" class="btn--gold-badge btn--gold-badge--map-overlay" aria-label="Find Classic Tow Service on Google Maps">
+                  <span class="btn--gold-badge__badge">
+                    <img src="google-maps-pin.svg" alt="Google Maps" width="16" height="20" loading="lazy" />
+                  </span>
+                  <span class="btn--gold-badge__text">
+                    <span class="map-badge-text-prefix">Find Us on </span><strong>Google Maps</strong>
+                  </span>
+                  <span class="btn--gold-badge__arrow" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </span>
+                </a>
+              </div>
             </div>
 
           </div>
